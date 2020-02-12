@@ -66,3 +66,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### React tips
+**Note: this context rule of thumb: Use arrow functions on any class methods you define and aren't part of React (i.e. render(), componentDidMount()). !**

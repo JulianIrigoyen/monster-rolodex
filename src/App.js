@@ -12,7 +12,7 @@ class App extends Component {
       searchField: ''
     };
 
-    //How to set 'this''s context without arrow functions
+    //How to set 'this''s context without arrow functions (!= lexical scoping)
     //this.handleChange = this.handleChange.bind(this);
 
   }
@@ -23,6 +23,7 @@ class App extends Component {
       .then(users => this.setState({monsters: users}));
     }
 
+    //Lexical scoping to bind the 'this' context
     handleChange = event => {
       this.setState({ searchField: event.target.value });
     }
@@ -34,6 +35,7 @@ class App extends Component {
         )
       return(
         <div className='App'>
+          <h1> Monster Rolodex </h1>
           <Searchbox
           placeholder='search monsters'
           handleChange = {this.handleChange} />
